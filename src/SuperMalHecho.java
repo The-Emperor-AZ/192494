@@ -2,66 +2,59 @@ import java.util.Scanner;
 
 public class SuperMalHecho {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        System.out.println("Escriba el nombre del producto 1:");
-        String a = s.nextLine();
-        System.out.println("Ingrese el precio:");
-        double p1 = s.nextDouble();
-        s.nextLine();
+        System.out.println("Escriba el nombre y precio de cada uno de los productos:");
+        String nombreProducto1 = input.nextLine();
+        float precoProducto1 = input.nextFloat();
+        input.nextLine();
 
-        System.out.println("Escriba el nombre del producto 2:");
-        String b = s.nextLine();
-        System.out.println("Ingrese el precio:");
-        float p2 = s.nextFloat();
-        s.nextLine();
+        String nombreProducto2 = input.nextLine();
+        float precioProducto2 = input.nextFloat();
+        input.nextLine();
 
-        System.out.println("Escriba el nombre del producto 3:");
-        String c = s.nextLine();
-        System.out.println("Ingrese el precio:");
-        int p3 = s.nextInt();
-        s.nextLine();
+        String nombreProducto3 = input.nextLine();
+        float precioProducto3 = input.nextFloat();
+        input.nextLine();
 
-        System.out.println("Escriba el nombre del producto 4:");
-        String d = s.nextLine();
-        System.out.println("Ingrese el precio:");
-        long p4 = s.nextLong();
-        s.nextLine();
+        String nombreProducto4 = input.nextLine();
+        float precioProdcucto4 = input.nextFloat();
+        input.nextLine();
+        
+        String nombreProducto5 = input.nextLine();
+        float precioProducto5 = input.nextFloat();
+        input.nextLine();
 
-        System.out.println("Escriba el nombre del producto 5:");
-        String e = s.nextLine();
-        System.out.println("Ingrese el precio:");
-        short p5 = s.nextShort();
-        s.nextLine();
+        float impuestoProduc1 = (precoProducto1 * 0.19f);
+        float descuentoProdu1 = (precoProducto1 > 10000) ? (precoProducto1 * 0.10f) : 0;
+        float totalProduc1 = precoProducto1 + impuestoProduc1 - descuentoProdu1;
 
-        double imp1 = (p1 * 0.19);
-        double desc1 = (p1 > 10000) ? (p1 * 0.10) : 0;
-        double total1 = p1 + imp1 - desc1;
+        float impuestoProduc2 = (precioProducto2 * 0.19f);
+        float descuentoProduc2 = (precioProducto2 > 10000) ? (precioProducto2 * 0.10f) : 0;
+        float totalProduc2 = precioProducto2 + impuestoProduc2 - descuentoProduc2;
 
-        double imp2 = (p2 * 0.19);
-        double desc2 = (p2 > 10000) ? (p2 * 0.10) : 0;
-        double total2 = p2 + imp2 - desc2;
+        float impuestoProduc3 = (precioProducto3 * 0.19f);
+        float descuentoProduc3 = (precioProducto3 > 10000) ? (precioProducto3 * 0.10f) : 0;
+        float totalProduc3 = precioProducto3 + impuestoProduc3 - descuentoProduc3;
 
-        double imp3 = (p3 * 0.19);
-        double desc3 = (p3 > 10000) ? (p3 * 0.10) : 0;
-        double total3 = p3 + imp3 - desc3;
+        float impuestoProduc4 = (precioProdcucto4 * 0.19f);
+        float descuentoProduc4 = (precioProdcucto4 > 10000) ? (precioProdcucto4 * 0.10f) : 0;
+        float totalProduc4 = precioProdcucto4 + impuestoProduc4 - descuentoProduc4;
 
-        double imp4 = (p4 * 0.19);
-        double desc4 = (p4 > 10000) ? (p4 * 0.10) : 0;
-        double total4 = p4 + imp4 - desc4;
+        float impuestoProduc5 = (precioProducto5 * 0.19f);
+        float descuentoProduc5 = (precioProducto5 > 10000) ? (precioProducto5 * 0.10f) : 0;
+        float totalProduc5 = precioProducto5 + impuestoProduc5 - descuentoProduc5;
 
-        double imp5 = (p5 * 0.19);
-        double desc5 = (p5 > 10000) ? (p5 * 0.10) : 0;
-        double total5 = p5 + imp5 - desc5;
+        System.out.println("Producto: " + nombreProducto1 + ", Precio final: " + totalProduc1);
+        System.out.println("Producto: " + nombreProducto2 + ", Precio final: " + totalProduc2);
+        System.out.println("Producto: " + nombreProducto3 + ", Precio final: " + totalProduc3);
+        System.out.println("Producto: " + nombreProducto4 + ", Precio final: " + totalProduc4);
+        System.out.println("Producto: " + nombreProducto5 + ", Precio final: " + totalProduc5);
 
-        System.out.println("Producto: " + a + ", Precio final: " + total1);
-        System.out.println("Producto: " + b + ", Precio final: " + total2);
-        System.out.println("Producto: " + c + ", Precio final: " + total3);
-        System.out.println("Producto: " + d + ", Precio final: " + total4);
-        System.out.println("Producto: " + e + ", Precio final: " + total5);
-
-        double suma = total1 + total2 + total3 + total4 + total5;
+        float suma = totalProduc1 + totalProduc2 + totalProduc3 + totalProduc4 + totalProduc5;
         System.out.println("El total de la compra es: " + suma);
+
+        input.close();
     }
 }
 
